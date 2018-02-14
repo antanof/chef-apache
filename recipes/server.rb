@@ -11,12 +11,7 @@ service 'httpd' do
   action [ :enable, :start ]
 end
 
-file '/var/www/html/index.html' do
-  content "<html><h1>Hello, world!</h1>
-<h2>You're on
-#{ node['hostname'] }
-#{ node['ipaddress'] }
-</h2>
-</html>"
+template '/var/www/html/index.html' do
+  source 'index.html.erb'
   action :create
 end
