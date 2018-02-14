@@ -1,10 +1,10 @@
 name 'apache'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'antanof'
+maintainer_email 'matt@itcloud.ovh'
 license 'all_rights'
 description 'Installs/Configures apache'
 long_description 'Installs/Configures apache'
-version '0.2.2'
+version '0.2.3'
 
 # If you upload to Supermarket you should set this so your cookbook
 # gets a `View Issues` link
