@@ -12,6 +12,11 @@ service 'httpd' do
 end
 
 file '/var/www/html/index.html' do
-  content '<html>Hello, world!</html>'
+  content "<html><h1>Hello, world!</h1>
+<h2>You're on
+#{ node['hostname'] }
+#{ node['ipaddress'] }
+</h2>
+</html>"
   action :create
 end
