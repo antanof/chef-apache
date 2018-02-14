@@ -21,6 +21,14 @@ describe 'apache::default' do
       expect(chef_run).to create_template('/var/www/html/index.html')
     end
 
+    it 'starts the service' do
+      expect(chef_run).to start_service('httpd')
+    end
+
+    it 'enables the service' do
+      expect(chef_run).to enable_service('httpd')
+    end
+
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
